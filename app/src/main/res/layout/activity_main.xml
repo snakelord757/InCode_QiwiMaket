@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/services_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_side_margin"
+        android:layout_marginStart="@dimen/default_side_margin"
+        android:layout_marginEnd="@dimen/default_side_margin"
+        android:background="@drawable/shape_search_bar_rounded_corners"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="@string/services_search"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/payments_tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/top_margin_30"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
+        app:layout_constraintTop_toBottomOf="@id/services_search_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/wallets_view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin_10"
+            android:layout_gravity="center_horizontal"
+            app:dotsCornerRadius="@dimen/dots_corner_radius"
+            app:dotsColor="@android:color/darker_gray"
+            app:dotsSize="@dimen/dots_size"
+            app:dotsSpacing="@dimen/dots_spacing"
+            app:selectedDotColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/wallets_view_pager2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+            <include
+                android:id="@+id/favorite_container"
+                layout="@layout/favorite_payments_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin_20"
+                app:layout_constraintTop_toBottomOf="@id/wallets_view_pager2" />
+
+            <include
+                app:layout_constraintTop_toBottomOf="@id/favorite_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin_20"
+                layout="@layout/payments_and_transaction_container"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navbar_items"
+        app:labelVisibilityMode="labeled"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff8f00</color>
+    <color name="colorPrimaryDark">#c56000</color>
+    <color name="colorPrimaryLight">#ffc046</color>
+    <color name="colorAccent">#f57c00</color>
+    <color name="search_bar_background">#e0e0e0</color>
+    <color name="all_actions_text_color">#005bb2</color>
+</resources>
