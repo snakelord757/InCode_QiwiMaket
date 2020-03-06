@@ -14,23 +14,45 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ViewPager2 walletsViewPager2;
+    private RecyclerView favoritePaymentsRecyclerView;
+    private RecyclerView paymentsAndTransactionsRecyclerView;
+    private DotsIndicator dotsIndicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ViewPager2 walletsViewPager2 = findViewById(R.id.wallets_view_pager2);
-        walletsViewPager2.setAdapter(new WalletsViewPagerAdapter(3));
-        DotsIndicator dotsIndicator = findViewById(R.id.dots_indicator);
-        dotsIndicator.setViewPager2(walletsViewPager2);
-        RecyclerView favoritePaymentsRecyclerView = findViewById(R.id.favorite_payments);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        favoritePaymentsRecyclerView.setLayoutManager(linearLayoutManager);
-        favoritePaymentsRecyclerView.setAdapter(new FavoritePaymentsRecyclerViewAdapter(this, 3));
-        RecyclerView paymentsAndTransactionRecyclerView = findViewById(R.id.payments_and_transactions);
-        LinearLayoutManager paymentsLinearLayoutManager = new LinearLayoutManager(this);
-        paymentsLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        paymentsAndTransactionRecyclerView.setLayoutManager(paymentsLinearLayoutManager);
-        paymentsAndTransactionRecyclerView.setAdapter(new PaymentsAndTransactionsRecyclerViewAdapter(this, 5));
+        walletsViewPager2 = findViewById(R.id.wallets_view_pager2);
+        dotsIndicator = findViewById(R.id.dots_indicator);
+        favoritePaymentsRecyclerView = findViewById(R.id.favorite_payments);
+        paymentsAndTransactionsRecyclerView = findViewById(R.id.payments_and_transactions);
+        setLayoutManagers();
+        setAdapters();
+        setViewPagerForIndicator();
     }
+
+    private void setAdapters()
+    {
+        walletsViewPager2.setAdapter(new WalletsViewPagerAdapter(3));
+        favoritePaymentsRecyclerView.setAdapter(new FavoritePaymentsRecyclerViewAdapter(this, 3));
+        paymentsAndTransactionsRecyclerView.setAdapter(new PaymentsAndTransactionsRecyclerViewAdapter(this, 5));
+    }
+
+
+    private void setLayoutManagers()
+    {
+        LinearLayoutManager favoritePaymentsLayoutManager =  new LinearLayoutManager(this);
+        favoritePaymentsLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        favoritePaymentsRecyclerView.setLayoutManager(favoritePaymentsLayoutManager);
+        LinearLayoutManager paymentsAndTransactionsLayoutManager =  new LinearLayoutManager(this);
+        paymentsAndTransactionsLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        paymentsAndTransactionsRecyclerView.setLayoutManager(paymentsAndTransactionsLayoutManager);
+    }
+
+    private void setViewPagerForIndicator()
+    {
+        dotsIndicator.setViewPager2(walletsViewPager2);
+    }
+
 }
