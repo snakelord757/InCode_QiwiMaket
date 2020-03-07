@@ -30,7 +30,7 @@
                 android:layout_marginTop="@dimen/top_margin_30"/>
 
             <Button
-                android:background="@drawable/replenish_balance_button_shape"
+                android:background="@drawable/replenish_button_ripple"
                 android:text="@string/replenish_balance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

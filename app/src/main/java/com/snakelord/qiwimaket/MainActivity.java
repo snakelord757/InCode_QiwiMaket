@@ -9,12 +9,14 @@ import android.os.Bundle;
 
 import com.snakelord.qiwimaket.adapters.FavoritePaymentsRecyclerViewAdapter;
 import com.snakelord.qiwimaket.adapters.PaymentsAndTransactionsRecyclerViewAdapter;
+import com.snakelord.qiwimaket.adapters.PromotionsViewAdapter;
 import com.snakelord.qiwimaket.adapters.WalletsViewPagerAdapter;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 walletsViewPager2;
+    private ViewPager2 promoViewPager2;
     private RecyclerView favoritePaymentsRecyclerView;
     private RecyclerView paymentsAndTransactionsRecyclerView;
     private DotsIndicator dotsIndicator;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         walletsViewPager2 = findViewById(R.id.wallets_view_pager2);
+        promoViewPager2 = findViewById(R.id.promotions);
         dotsIndicator = findViewById(R.id.dots_indicator);
         favoritePaymentsRecyclerView = findViewById(R.id.favorite_payments);
         paymentsAndTransactionsRecyclerView = findViewById(R.id.payments_and_transactions);
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAdapters()
     {
+        promoViewPager2.setAdapter(new PromotionsViewAdapter(15));
         walletsViewPager2.setAdapter(new WalletsViewPagerAdapter(3));
         favoritePaymentsRecyclerView.setAdapter(new FavoritePaymentsRecyclerViewAdapter(this, 3));
         paymentsAndTransactionsRecyclerView.setAdapter(new PaymentsAndTransactionsRecyclerViewAdapter(this, 5));

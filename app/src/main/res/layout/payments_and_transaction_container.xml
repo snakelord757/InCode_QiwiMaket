@@ -37,4 +37,11 @@
         app:layout_constraintTop_toBottomOf="@id/payments_and_transactions_title"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/promotions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_30"
+        app:layout_constraintTop_toBottomOf="@id/payments_and_transactions"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
