@@ -6,7 +6,7 @@
     <dimen name="top_margin_20">20dp</dimen>
     <dimen name="top_margin_30">30dp</dimen>
     <dimen name="container_title_text_size">30sp</dimen>
-    <dimen name="favorite_payments_title">20dp</dimen>
+    <dimen name="favorite_payments_title">20sp</dimen>
     <dimen name="dots_size">7dp</dimen>
     <dimen name="dots_spacing">4dp</dimen>
     <dimen name="dots_corner_radius">8dp</dimen>
