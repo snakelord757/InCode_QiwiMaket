@@ -13,6 +13,9 @@ import com.snakelord.qiwimaket.R;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public final class UsefulServicesAdapter extends RecyclerView.Adapter<UsefulServicesAdapter.ViewHolder> {
 
     private int itemCounter;
@@ -50,11 +53,12 @@ public final class UsefulServicesAdapter extends RecyclerView.Adapter<UsefulServ
 
     final class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView itemTitle;
+        @BindView(R.id.useful_item_title)
+        TextView itemTitle;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemTitle = itemView.findViewById(R.id.useful_item_title);
+            ButterKnife.bind(this, itemView);
         }
 
         void bind(String title) {

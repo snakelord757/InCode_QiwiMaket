@@ -13,6 +13,9 @@ import com.snakelord.qiwimaket.R;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public final class FavoritePaymentsRecyclerViewAdapter extends RecyclerView.Adapter<FavoritePaymentsRecyclerViewAdapter.ViewHolder> {
 
     private int itemCount;
@@ -49,11 +52,12 @@ public final class FavoritePaymentsRecyclerViewAdapter extends RecyclerView.Adap
 
     final class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView favoritePaymentsTitleTextView;
+        @BindView(R.id.favorite_payment_title)
+        TextView favoritePaymentsTitleTextView;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            favoritePaymentsTitleTextView = itemView.findViewById(R.id.favorite_payment_title);
+            ButterKnife.bind(this, itemView);
         }
 
         void bind(String title)

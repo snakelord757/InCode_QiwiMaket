@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.snakelord.qiwimaket.R;
 
+import butterknife.BindView;
+
 public final class PromotionsViewAdapter extends RecyclerView.Adapter<PromotionsViewAdapter.ViewHolder>
 {
     private int itemCounter;
@@ -36,8 +38,8 @@ public final class PromotionsViewAdapter extends RecyclerView.Adapter<Promotions
 
     final class ViewHolder extends RecyclerView.ViewHolder
     {
-
-        private TextView promoTitle;
+        @BindView(R.id.promo_title)
+        TextView promoTitle;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);

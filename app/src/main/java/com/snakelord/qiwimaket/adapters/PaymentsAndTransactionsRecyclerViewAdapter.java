@@ -13,6 +13,9 @@ import com.snakelord.qiwimaket.R;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public final class PaymentsAndTransactionsRecyclerViewAdapter extends RecyclerView.Adapter<PaymentsAndTransactionsRecyclerViewAdapter.ViewHolder> {
 
     private int itemCount;
@@ -51,11 +54,12 @@ public final class PaymentsAndTransactionsRecyclerViewAdapter extends RecyclerVi
 
     final class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView PaymentsAndTransactionTitleTitleTextView;
+        @BindView(R.id.payment_item_title)
+        TextView PaymentsAndTransactionTitleTitleTextView;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            PaymentsAndTransactionTitleTitleTextView = itemView.findViewById(R.id.payment_item_title);
+            ButterKnife.bind(this, itemView);
         }
 
         void bind(String title)
