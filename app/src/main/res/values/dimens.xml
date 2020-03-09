@@ -5,16 +5,23 @@
     <dimen name="top_margin_10">10dp</dimen>
     <dimen name="top_margin_20">20dp</dimen>
     <dimen name="top_margin_30">30dp</dimen>
+    <dimen name="margin_between_favorite_payments_items">15dp</dimen>
+    <dimen name="margin_between_favorite_payments_items_land">30dp</dimen>
     <dimen name="container_title_text_size">30sp</dimen>
     <dimen name="favorite_payments_title">20sp</dimen>
     <dimen name="dots_size">7dp</dimen>
     <dimen name="dots_spacing">4dp</dimen>
     <dimen name="dots_corner_radius">8dp</dimen>
     <dimen name="circle_size">70dp</dimen>
+    <dimen name="circle_border_with">2dp</dimen>
     <dimen name="payments_icon_size">48dp</dimen>
     <dimen name="payments_title_size">15sp</dimen>
     <dimen name="promo_height">100dp</dimen>
     <dimen name="wallet_height">170dp</dimen>
     <dimen name="wallet_corners_radius">20dp</dimen>
     <dimen name="wallet_margin_land">80dp</dimen>
+    <dimen name="payments_item_width">100dp</dimen>
+    <dimen name="replenish_button_corners_radius">30dp</dimen>
+    <dimen name="search_bar_corners_radius">10dp</dimen>
+    <dimen name="gradient_angle">45.0</dimen>
 </resources>

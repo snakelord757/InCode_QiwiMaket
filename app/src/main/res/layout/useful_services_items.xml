@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="62dp"
     android:clickable="true"
     android:background="?android:attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -11,7 +12,7 @@
         android:id="@+id/useful_item_icon"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="@dimen/default_side_margin_land"
+        android:layout_marginStart="@dimen/default_side_margin"
         android:src="@drawable/ic_android_gray_24dp"
         android:tint="@android:color/black"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,18 +24,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
         android:textColor="@android:color/black"
         android:textSize="26sp"
         app:layout_constraintLeft_toRightOf="@id/useful_item_icon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_goneMarginTop="@dimen/default_side_margin"
         tools:text="Название услуги" />
 
     <ImageView
         android:id="@+id/useful_item_chevron"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="@dimen/default_side_margin_land"
+        android:layout_marginEnd="@dimen/default_side_margin"
         android:src="@drawable/ic_chevron_right_black_24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

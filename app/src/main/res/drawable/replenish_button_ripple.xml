@@ -3,7 +3,7 @@
     <item>
         <shape>
             <corners
-                android:radius="30dp"/>
+                android:radius="@dimen/replenish_button_corners_radius"/>
             <solid
                 android:color="@android:color/white"/>
         </shape>

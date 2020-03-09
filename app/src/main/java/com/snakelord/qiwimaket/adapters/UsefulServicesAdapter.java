@@ -30,7 +30,7 @@ public final class UsefulServicesAdapter extends RecyclerView.Adapter<UsefulServ
     @NonNull
     @Override
     public UsefulServicesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.useful_items, parent, false));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.useful_services_items, parent, false));
     }
 
     @Override

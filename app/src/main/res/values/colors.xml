@@ -5,4 +5,5 @@
     <color name="colorAccent">#f57c00</color>
     <color name="search_bar_background">#e0e0e0</color>
     <color name="all_actions_text_color">#005bb2</color>
+    <color name="statusBarColor">#aeaeae</color>
 </resources>
