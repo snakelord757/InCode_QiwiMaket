@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.dots_indicator)
     DotsIndicator dotsIndicator;
     private Unbinder unbinder;
+    static final int PROMO_ITEMS_COUNT = 15;
+    static final int WALLETS_ITEMS_COUNT = 3;
+    static final int FAVORITE_PAYMENTS_COUNT = 3;
+    static final int PAYMENTS_AND_TRANSACTIONS_ITEMS_COUNT = 5;
+    static final int USEFUL_SERVICES_ITEMS_COUNTER = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setAdapters() {
-        promoViewPager2.setAdapter(new PromotionsViewAdapter(15));
-        walletsViewPager2.setAdapter(new WalletsViewPagerAdapter(3));
-        favoritePaymentsRecyclerView.setAdapter(new FavoritePaymentsRecyclerViewAdapter(this, 3));
-        paymentsAndTransactionsRecyclerView.setAdapter(new PaymentsAndTransactionsRecyclerViewAdapter(this, 5));
-        usefulServicesRecyclerView.setAdapter(new UsefulServicesAdapter(this, 4));
+        promoViewPager2.setAdapter(new PromotionsViewAdapter(PROMO_ITEMS_COUNT));
+        walletsViewPager2.setAdapter(new WalletsViewPagerAdapter(WALLETS_ITEMS_COUNT));
+        favoritePaymentsRecyclerView.setAdapter(new FavoritePaymentsRecyclerViewAdapter(this, FAVORITE_PAYMENTS_COUNT));
+        paymentsAndTransactionsRecyclerView.setAdapter(new PaymentsAndTransactionsRecyclerViewAdapter(this, PAYMENTS_AND_TRANSACTIONS_ITEMS_COUNT));
+        usefulServicesRecyclerView.setAdapter(new UsefulServicesAdapter(this, USEFUL_SERVICES_ITEMS_COUNTER));
     }
 
     private void setLayoutManagers() {
