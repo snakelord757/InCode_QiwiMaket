@@ -8,15 +8,20 @@
     <string name="profile_page">Профиль</string>
     <string name="balance">9999,99 ₽</string>
     <string name="replenish_balance">Пополнить баланс</string>
-    <string name="favorite">Избранное</string>
+    <string name="favorite_title">Избранное</string>
     <string name="my_mobile_payments">Мой мобильный</string>
     <string name="tea_payments">За английский чай</string>
     <string name="strange_payments">За мат извени</string>
     <string name="all_actions_text">Все</string>
-    <string name="payments_and_transactions">Платежи и переводы</string>
+    <string name="payments_and_transactions_title">Платежи и переводы</string>
     <string name="transaction_to_Qiwi_user">На Qiwi кошелек</string>
     <string name="transaction_to_card">Перевод на карту</string>
     <string name="payment_mobile">Сотовая связь</string>
     <string name="payment_another">Другое</string>
     <string name="payment_entertainment">Развлечения</string>
+    <string name="useful_title">Полезное</string>
+    <string name="split_check">Деление чека</string>
+    <string name="accounts_payable">Счета к оплате</string>
+    <string name="map_of_terminal">Карта терминалов</string>
+    <string name="currency_rates">Курсы валют</string>
 </resources>

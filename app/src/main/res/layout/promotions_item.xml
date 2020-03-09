@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/wallet_height"
+        android:layout_height="@dimen/promo_height"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="@dimen/default_side_margin"
         android:layout_marginEnd="@dimen/default_side_margin"

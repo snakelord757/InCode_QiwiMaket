@@ -13,6 +13,7 @@
     <dimen name="circle_size">70dp</dimen>
     <dimen name="payments_icon_size">48dp</dimen>
     <dimen name="payments_title_size">15sp</dimen>
+    <dimen name="promo_height">100dp</dimen>
     <dimen name="wallet_height">170dp</dimen>
     <dimen name="wallet_corners_radius">20dp</dimen>
     <dimen name="wallet_margin_land">80dp</dimen>

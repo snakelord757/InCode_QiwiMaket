@@ -14,8 +14,7 @@ public final class PromotionsViewAdapter extends RecyclerView.Adapter<Promotions
 {
     private int itemCounter;
 
-    public PromotionsViewAdapter(int itemCounter)
-    {
+    public PromotionsViewAdapter(int itemCounter) {
         this.itemCounter = itemCounter;
     }
 

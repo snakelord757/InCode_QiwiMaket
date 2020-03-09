@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/payments_and_transactions_title"
-        android:text="@string/payments_and_transactions"
+        android:text="@string/payments_and_transactions_title"
         android:textSize="@dimen/container_title_text_size"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -42,7 +42,7 @@
         android:id="@+id/promotions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top_margin_10"
+        android:layout_marginTop="@dimen/top_margin_30"
         app:layout_constraintTop_toBottomOf="@id/payments_and_transactions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
