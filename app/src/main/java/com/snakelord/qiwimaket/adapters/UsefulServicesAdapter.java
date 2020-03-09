@@ -19,7 +19,7 @@ public final class UsefulServicesAdapter extends RecyclerView.Adapter<UsefulServ
     private Context context;
     private ArrayList<String> usefulServicesTitles = new ArrayList<>();
 
-    public UsefulServicesAdapter ( Context context, int itemCounter) {
+    public UsefulServicesAdapter (Context context, int itemCounter) {
         this.itemCounter = itemCounter;
         this.context = context;
     }
