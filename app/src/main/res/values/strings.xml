@@ -19,7 +19,7 @@
     <string name="payment_mobile">Сотовая связь</string>
     <string name="payment_another">Другое</string>
     <string name="payment_entertainment">Развлечения</string>
-    <string name="useful_title">Полезное</string>
+    <string name="useful_services_title">Полезное</string>
     <string name="split_check">Деление чека</string>
     <string name="accounts_payable">Счета к оплате</string>
     <string name="map_of_terminal">Карта терминалов</string>
