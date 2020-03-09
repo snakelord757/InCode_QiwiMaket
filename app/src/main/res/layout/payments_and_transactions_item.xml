@@ -6,7 +6,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginEnd="5dp">
 
-    <FrameLayout
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/payment_item_icon"
+        android:layout_width="@dimen/circle_size"
+        android:layout_height="@dimen/circle_size"
+        android:src="@drawable/ic_payments_icon"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--<FrameLayout
         android:id="@+id/circle_background"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
@@ -24,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/circle_background"/>
+        app:layout_constraintBottom_toBottomOf="@id/circle_background"/>-->
 
     <TextView
         android:id="@+id/payment_item_title"
@@ -35,7 +47,7 @@
         android:layout_marginTop="@dimen/top_margin_10"
         android:gravity="center_horizontal"
         android:maxEms="6"
-        app:layout_constraintTop_toBottomOf="@id/circle_background"
+        app:layout_constraintTop_toBottomOf="@id/payment_item_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="Название услуги"/>

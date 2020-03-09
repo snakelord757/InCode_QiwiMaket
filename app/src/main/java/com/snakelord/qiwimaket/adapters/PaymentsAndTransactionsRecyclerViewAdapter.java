@@ -1,6 +1,7 @@
 package com.snakelord.qiwimaket.adapters;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public final class PaymentsAndTransactionsRecyclerViewAdapter extends RecyclerView.Adapter<PaymentsAndTransactionsRecyclerViewAdapter.ViewHolder> {
 
@@ -56,6 +58,8 @@ public final class PaymentsAndTransactionsRecyclerViewAdapter extends RecyclerVi
 
         @BindView(R.id.payment_item_title)
         TextView PaymentsAndTransactionTitleTitleTextView;
+        @BindView(R.id.payment_item_icon)
+        CircleImageView PaymentsAndTransactionIconCircleImageView;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +68,7 @@ public final class PaymentsAndTransactionsRecyclerViewAdapter extends RecyclerVi
 
         void bind(String title)
         {
+            PaymentsAndTransactionIconCircleImageView.setColorFilter(itemView.getResources().getColor(R.color.colorPrimary));
             PaymentsAndTransactionTitleTitleTextView.setText(title);
         }
     }
