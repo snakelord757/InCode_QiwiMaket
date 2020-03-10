@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/useful_item_icon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/useful_item_icon_size"
+        android:layout_height="@dimen/useful_item_icon_size"
         android:layout_marginStart="@dimen/default_side_margin_land"
         android:src="@drawable/ic_android_gray_24dp"
         android:tint="@android:color/black"
@@ -23,9 +23,9 @@
         android:id="@+id/useful_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="@dimen/useful_item_title_margin"
         android:textColor="@android:color/black"
-        android:textSize="26sp"
+        android:textSize="@dimen/useful_item_title_text_size"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/useful_item_icon"
         app:layout_constraintBottom_toBottomOf="parent"
