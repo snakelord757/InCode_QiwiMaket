@@ -60,8 +60,7 @@ public final class FavoritePaymentsRecyclerViewAdapter extends RecyclerView.Adap
             ButterKnife.bind(this, itemView);
         }
 
-        void bind(String title)
-        {
+        void bind(String title) {
             favoritePaymentsTitleTextView.setText(title);
         }
     }

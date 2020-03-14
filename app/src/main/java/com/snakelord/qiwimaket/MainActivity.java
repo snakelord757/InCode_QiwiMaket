@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.beginTransaction().add(R.id.fragment_container, currentFragment).commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = (item) ->
-    {
+    private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = (item) -> {
             switch (item.getItemId()) {
                 case R.id.main_page_item :
                     currentFragment = new PaymentsToolsFragment();

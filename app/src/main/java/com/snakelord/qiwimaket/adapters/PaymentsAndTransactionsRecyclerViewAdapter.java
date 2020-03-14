@@ -65,8 +65,7 @@ public final class PaymentsAndTransactionsRecyclerViewAdapter extends RecyclerVi
             ButterKnife.bind(this, itemView);
         }
 
-        void bind(String title)
-        {
+        void bind(String title) {
             PaymentsAndTransactionIconCircleImageView.setColorFilter(itemView.getResources().getColor(R.color.colorPrimary));
             PaymentsAndTransactionTitleTitleTextView.setText(title);
         }
