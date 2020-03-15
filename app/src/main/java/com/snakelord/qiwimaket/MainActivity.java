@@ -1,10 +1,12 @@
 package com.snakelord.qiwimaket;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     private Unbinder unbinder;
     private FragmentManager fragmentManager;
-    private Fragment currentFragment = new PaymentsToolsFragment();
+    private Fragment currentFragment;
+    private static final String LAST_FRAGMENT = "Last Fragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
         unbinder = ButterKnife.bind(this);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragment_container, currentFragment).commit();
+        if (savedInstanceState == null)
+            bottomNavigationView.setSelectedItemId(R.id.main_page_item);
+        else
+            loadFragment(savedInstanceState);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = (item) -> {
@@ -40,6 +46,17 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager.beginTransaction().replace(R.id.fragment_container, currentFragment).commit();
             return true;
     };
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        getSupportFragmentManager().putFragment(outState, LAST_FRAGMENT, currentFragment);
+    }
+
+    private void loadFragment(Bundle bundle) {
+        currentFragment = getSupportFragmentManager().getFragment(bundle, LAST_FRAGMENT);
+        fragmentManager.beginTransaction().replace(R.id.fragment_container, currentFragment).commit();
+    }
 
     @Override
     protected void onDestroy() {
