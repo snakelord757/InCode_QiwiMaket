@@ -28,4 +28,12 @@
     <dimen name="useful_item_title_margin">15dp</dimen>
     <dimen name="useful_item_title_text_size">26sp</dimen>
     <dimen name="useful_item_icon_size">32dp</dimen>
+    <dimen name="activate_card_view_height">70dp</dimen>
+    <dimen name="activate_card_view_side_margin">10dp</dimen>
+    <dimen name="card_icon_size">100dp</dimen>
+    <dimen name="card_info_margin_start">20dp</dimen>
+    <dimen name="card_name_text_size">20sp</dimen>
+    <dimen name="card_side_margin">10dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="action_card_text_size">24sp</dimen>
 </resources>

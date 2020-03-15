@@ -23,4 +23,13 @@
     <string name="accounts_payable">Счета к оплате</string>
     <string name="map_of_terminal">Карта терминалов</string>
     <string name="currency_rates">Курсы валют</string>
+    <string name="activate_qiwi_card">Активировать карту QIWI</string>
+    <string name="order_qiwi_card">Заказать карту QIWI</string>
+    <string name="card_name">Название карты</string>
+    <string name="card_info">Здесь будет ооооооооооооооооооооооооооооооооооооооооооооооооооочень длинное описание</string>
+    <string name="card_price">199 ₽, действует 1 год</string>
+    <string name="link_card">Привязать карту</string>
+    <string name="link_card_hint">Привяжите карту любого банка, чтобы платить прямо с нее, не пополняя кошелёк</string>
+    <string name="my_cards">Мои карты</string>
+    <string name="cards_from_other_banks">Карты других банков</string>
 </resources>
