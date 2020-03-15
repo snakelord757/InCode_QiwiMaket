@@ -52,9 +52,7 @@ public class CardsFragment extends Fragment {
     }
 
     private void setTabMediator() {
-        new TabLayoutMediator(tabLayout, viewPager2,
-                (tab, position) -> tab.setText(tabsTitle.get(position))
-        ).attach();
+        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> tab.setText(tabsTitle.get(position))).attach();
     }
 
 }
