@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private Fragment currentFragment;
     private static final String LAST_FRAGMENT = "Last Fragment";
+    private static final String PREVIOUS_FRAGMENT = "Previous fragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +38,12 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = (item) -> {
             switch (item.getItemId()) {
                 case R.id.main_page_item :
-                    currentFragment = new PaymentsToolsFragment();
+                    fragmentManager.beginTransaction().replace(R.id.fragment_container, new PaymentsToolsFragment()).commit();
                     break;
                 case R.id.cards_page_item :
-                    currentFragment = new CardsFragment();
+                    fragmentManager.beginTransaction().replace(R.id.fragment_container, new CardsFragment()).addToBackStack(PREVIOUS_FRAGMENT).commit();
                     break;
             }
-            fragmentManager.beginTransaction().replace(R.id.fragment_container, currentFragment).commit();
             return true;
     };
 
